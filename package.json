@@ -1,0 +1,17 @@
+{
+  "name": "human-d(a)emons",
+  "version": "0.0.1",
+  "description": "personal rss feed project",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "mstratiev",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.3",
+    "feedparser": "^1.1.4",
+    "node-feedparser": "^1.0.1",
+    "request": "^2.67.0"
+  }
+}

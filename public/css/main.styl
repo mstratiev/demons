@@ -1,0 +1,46 @@
+html, body, div, h1,h2,h3,h4, ul, li, a, span, p
+	margin 0
+	padding 0
+
+header-height = 3rem
+
+header
+	height header-height
+	position fixed
+	top 0
+	display block
+	nav
+		display block
+		ul
+			list-style-type none
+			li
+				color black
+				display inline-block
+				a
+					color black
+					text-decoration none
+
+main
+	margin-top header-height
+.title
+	padding-top 2rem
+	padding-bottom 1.5rem
+	text-align center
+	h1
+		text-transform uppercase
+#content
+	display block
+	.loading
+		text-align center
+		font-size 2rem
+		padding-top 3rem
+	.article
+		text-align center
+		h3
+			font-size 1.5rem
+			padding-top 2rem
+			padding-bottom 1rem
+		.description
+			display inline-block
+			text-align left
+			width 30rem

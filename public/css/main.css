@@ -1,0 +1,67 @@
+html,
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+ul,
+li,
+a,
+span,
+p {
+  margin: 0;
+  padding: 0;
+}
+header {
+  height: 3rem;
+  position: fixed;
+  top: 0;
+  display: block;
+}
+header nav {
+  display: block;
+}
+header nav ul {
+  list-style-type: none;
+}
+header nav ul li {
+  color: #000;
+  display: inline-block;
+}
+header nav ul li a {
+  color: #000;
+  text-decoration: none;
+}
+main {
+  margin-top: 3rem;
+}
+.title {
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+  text-align: center;
+}
+.title h1 {
+  text-transform: uppercase;
+}
+#content {
+  display: block;
+}
+#content .loading {
+  text-align: center;
+  font-size: 2rem;
+  padding-top: 3rem;
+}
+#content .article {
+  text-align: center;
+}
+#content .article h3 {
+  font-size: 1.5rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+#content .article .description {
+  display: inline-block;
+  text-align: left;
+  width: 30rem;
+}
