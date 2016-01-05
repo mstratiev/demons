@@ -8,4 +8,6 @@ module.exports = ['http://rss.cnn.com/rss/edition.rss',
             'http://www.npr.org/rss/rss.php?id=1001',
             'http://feeds.reuters.com/reuters/MostRead',
             'http://feeds.reuters.com/reuters/topNews',
-            'http://feeds.reuters.com/Reuters/worldNews'];
+            'http://feeds.reuters.com/Reuters/worldNews',
+            'http://atwar.blogs.nytimes.com/feed/',
+            'http://rss.nytimes.com/services/xml/rss/nyt/World.xml'];
