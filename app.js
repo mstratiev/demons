@@ -22,7 +22,7 @@ app.get('/posts/:demon', function (req, res){
 	res.send('Requesting daily posts by '+ req.params.demon);
 })
 
-var server = app.listen(3000, function () {
+var server = app.listen(5000, function () {
   var host = server.address().address;
   var port = server.address().port;
 
