@@ -10,18 +10,30 @@ var postController = (function() {
 					})
 				})
 				console.log(os)
-				context.$element().html(template(os))
+				data.demon.check().then(function(demon){
+					os.demon = demon;
+					var os2={demon:demon, posts:[]};
+					_(os.posts).each(function(item){
+						if(item[demon]){
+						os2.posts.push(item)
+						}
+					})
+					console.log(os2)
+					
+					context.$element().html(template(os2))
+				})
 			})
 		})
 	};
+
 	var getByDemon = function(context, demon){
 		data.news.getByDemon(demon).then(function(res){
 			templates.get('demons').then(function(template){
 				context.$element().html(template(res))
 			})
 		})
-
 	};
+
 	var getDaily =function(context){
 		data.news.getDaily().then(function(res){
 			templates.get('demons').then(function(template){

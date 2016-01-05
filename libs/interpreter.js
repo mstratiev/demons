@@ -33,7 +33,7 @@ var Interpreter = (function() {
 
         news.forEach(function(gr) {
             gr.forEach(function(post) {
-                _.each(daemons, function(words, demon) {
+                _.each(self.daemons, function(words, demon) {
                     post[demon] = self.interprete(post, words)
                 })
             })

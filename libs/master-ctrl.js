@@ -20,7 +20,8 @@ var MasterControl = (function() {
     MasterControl.prototype.readAllPosts = function() {
         var self = this;
         var p = new Promise(function(resove, reject) {
-            self.reader.readAll().then(function(res) {
+            self.reader.readAll().then(function(resa) {
+                var res = self.interpreter.sorta(resa);
                 res.forEach(function(post) {
                     if (Array.isArray(post)) {
                         post.forEach(function(p) {
@@ -54,7 +55,7 @@ var MasterControl = (function() {
 
     MasterControl.prototype.interprete = function() {
         var self = this;
-        console.log('here')
+        console.log('MC intereprete')
         var p = new Promise(function(resolve, reject) {
             self.returnCurrentPosts().then(function(res) {
                 var result = self.interpreter.sorta(res);
@@ -74,6 +75,7 @@ var MasterControl = (function() {
 
 module.exports = new MasterControl();
 
+/*
 
 var m = new MasterControl();
 m.returnCurrentPosts().then(function(re) {
@@ -84,3 +86,4 @@ m.interprete().then(function(res) {
 }, function(err) {
     console.log("error in MasterControl, returnCurrentPosts" + err)
 });
+*/

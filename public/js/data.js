@@ -14,6 +14,15 @@ var data = (function() {
     }
 
 
+    function rnd(low, high) {
+        return Math.floor(Math.random() * (high - low + 1) + low);
+    }
+
+    function newDeamon() {
+        var demons = ['Asmodeus', 'Lucifer', 'Mammon', 'Leviathan', 'Beelzebub', 'Satan', 'Belphegor'];
+        return demons[rnd(0,6)];
+    }
+
 
     var getNews = function() {
         var promise = new Promise(function(resolve, reject) {
@@ -35,7 +44,7 @@ var data = (function() {
     var getByDemon = function(demon) {
         var promise = new Promise(function(resolve, reject) {
             $.ajax({
-                url: '/posts/'+ demon,
+                url: '/posts/' + demon,
                 method: "GET",
                 data: {},
                 success: function(res) {
@@ -70,11 +79,29 @@ var data = (function() {
     };
 
 
+
+    var checkDeamon = function() {
+        var promise = new Promise(function(resolve, reject) {
+            var dem = getDeamon();
+            if (!dem) {
+                dem = newDeamon();
+                setDeamon(dem);
+            }
+            resolve(dem)
+        })
+
+        return promise
+
+    };
+
     return {
         news: {
             get: getNews,
             getByDemon: getByDemon,
             getDaily: getDaily
+        },
+        demon: {
+            check: checkDeamon
         }
     }
 })();
