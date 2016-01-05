@@ -52,6 +52,11 @@ main {
   font-size: 2rem;
   padding-top: 3rem;
 }
+#content .demon {
+  position: absolute;
+  font-size: 30rem;
+  opacity: 0.1;
+}
 #content .article {
   text-align: center;
 }
