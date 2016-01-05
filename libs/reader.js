@@ -2,15 +2,16 @@ var Reader = (function() {
 
     var request = require('request');
     var FeedParser = require('feedparser');
-
+    var sitesJSON = require('./sitesJSON.js');
+    
+//ny times,
+//al jezeera; tyhe guardian;
+//Constant Dulaardt ?? - @Berlin - nagrada za net.art
+//fb followers army - army of mercenaries; in Independence war @USA
+//w names of the soldiers
 
     function Reader() {
-        this.sites = ['http://rss.cnn.com/rss/edition.rss',
-            'http://rss.cnn.com/rss/edition_europe.rss',
-            'http://feeds.bbci.co.uk/news/rss.xml',
-            'http://rss.dw.de/rdf/rss-en-top',
-            'http://rss.dw.de/rdf/rss-en-world'
-        ];
+        this.sites = sitesJSON;
         this.news = [];
     };
 
@@ -65,8 +66,8 @@ var Reader = (function() {
         var news = [];
         this.sites.forEach((site) => {
                 news.push(self.read(site))
-        });
-
+        })
+;
         return Promise.all(news);
     };
 

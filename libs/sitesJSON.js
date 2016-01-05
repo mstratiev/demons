@@ -1,0 +1,11 @@
+module.exports = ['http://rss.cnn.com/rss/edition.rss',
+            'http://rss.cnn.com/rss/edition_europe.rss',
+            'http://feeds.bbci.co.uk/news/rss.xml',
+            'http://rss.dw.de/rdf/rss-en-top',
+            'http://rss.dw.de/rdf/rss-en-world',
+            'http://rss.cbc.ca/lineup/topstories.xml',
+            'http://rss.cbc.ca/lineup/world.xml',
+            'http://www.npr.org/rss/rss.php?id=1001',
+            'http://feeds.reuters.com/reuters/MostRead',
+            'http://feeds.reuters.com/reuters/topNews',
+            'http://feeds.reuters.com/Reuters/worldNews'];

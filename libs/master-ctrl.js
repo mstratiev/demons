@@ -41,6 +41,8 @@ var MasterControl = (function() {
                 self.date = new Date().getDate();
                 self.readAllPosts().then(function(res) {
                     resolve(res)
+                }, function(err) {
+                    console.log("error in MasterControl, returnCurrentPosts" + err)
                 });
             } else {
 
@@ -50,8 +52,35 @@ var MasterControl = (function() {
         return p;
     };
 
+    MasterControl.prototype.interprete = function() {
+        var self = this;
+        console.log('here')
+        var p = new Promise(function(resolve, reject) {
+            self.returnCurrentPosts().then(function(res) {
+                var result = self.interpreter.sorta(res);
+                resolve(result);
+            }, function(err) {
+                console.log("error in MasterControl, interprete" + err)
+                reject(err);
+            })
+        })
+
+        return p;
+    };
+
 
     return MasterControl;
 })();
 
 module.exports = new MasterControl();
+
+
+var m = new MasterControl();
+m.returnCurrentPosts().then(function(re) {
+    //console.log(re)
+})
+m.interprete().then(function(res) {
+    //console.log(res)
+}, function(err) {
+    console.log("error in MasterControl, returnCurrentPosts" + err)
+});
