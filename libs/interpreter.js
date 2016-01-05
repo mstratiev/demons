@@ -47,29 +47,5 @@ var Interpreter = (function() {
 
     return Interpreter;
 })();
-// var terst = [[{ title: '#prideandprejudice: National spirit - Trailer',
-//      description: 'What makes your home country what it is? Meet a former neo-Nazi, a man campaigning for the independence of his state and a woman displaced by civil conflict as they struggle to define what home means to them.',
-//      summary: 'same',
-//      date: 'Fri Dec 18 2015 18:10:00 GMT+0200 (FLE Standard Time)',
-//      pubdate: 'Fri Dec 18 2015 18:10:00 GMT+0200 (FLE Standard Time)',
-//      pubDate: 'same',
-//      link: 'http://www.dw.com/en/prideandprejudice-national-spirit-trailer/a-18928233?maca=en-rss-en-world-4025-rdf',
-//      guid: 'same',
-//      author: null,
-//      comments: null,
-//      origlink: null,
-//      image: {},
-//      source: {},
-//      categories: [Object],
-//      enclosures: [],
-//      'rdf:@': [Object],
-//      'rdf:title': [Object],
-//      'rdf:link': [Object],
-//      'rdf:description': [Object],
-//      'dc:date': [Object],
-//      'dc:subject': [Object],
-//      'dc:language': [Object],
-//      'dwsyn:contentid': [Object],
-//      meta: [Object] } ] ];
 
 module.exports = new Interpreter();
