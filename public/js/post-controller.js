@@ -9,7 +9,8 @@ var postController = (function() {
 						os.posts.push(o);
 					})
 				})
-				console.log(os)
+				//------------------------------------
+				//console.log(os)
 				data.demon.check().then(function(demon){
 					os.demon = demon;
 					var os2={demon:demon, posts:[]};
@@ -18,7 +19,8 @@ var postController = (function() {
 						os2.posts.push(item)
 						}
 					})
-					console.log(os2)
+					//-------------------------------
+					//console.log(os2)
 					
 					context.$element().html(template(os2))
 				})

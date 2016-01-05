@@ -21,10 +21,11 @@ var daemons = {
     "Asmodeus": ["lust", "sex", "affair"],
     "Lucifer": ["pride", "president", "minister", "prize", "sanction"],
     "Mammon": ["greed", "corruption", "bribe", "money", "award", "cash", "valuable", "rare", "sanction", "gold", "revenue", "rob"],
-    "Beelzebub": ["gluttony", "government"],
-    "Leviathan": ["envy", "celebrity", "celebrities", "migrants"],
-    "Satan": ["wrath", "threat", "soldier", "battle", "terror", "terrified", "bomb", "attack", "kill", "alert", "war ", "nazi", "missle", "fight", "impact", "armed"],
-    "Belphegor": ["sloth"]
+   // "Beelzebub": ["gluttony", "government"],
+    "Leviathan": ["envy", "celebrity", "celebrities", "migrants", "border"],
+    "Satan": ["wrath", "threat", "soldier", "battle", "terror", "terrified", "bomb", "attack", "kill", "alert", "war ", "nazi", "missle", "fight", "impact", "armed"]
+    //,
+    //"Belphegor": ["sloth"]
 };
 
 module.exports = daemons;
