@@ -53,11 +53,14 @@ main {
   padding-top: 3rem;
 }
 #content .demon {
-  position: absolute;
+  position: fixed;
+  top: 0;
   text-align: center;
   width: 100%;
-  font-size: 10rem;
+  font-size: 20vw;
+  line-height: 20vw;
   opacity: 0.1;
+  z-index: -1;
 }
 #content .article {
   text-align: center;
