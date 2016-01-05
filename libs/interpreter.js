@@ -6,7 +6,6 @@ var demonsJSON = require('./demonsJSON.js');
 
 var Interpreter = (function() {
     var Interpreter = function() {
-        this.keywords = keywords;
         this.daemons = demonsJSON;
         return this;
     };
