@@ -1,7 +1,7 @@
 'use strict'
 
 var _ = require('lodash');
-var demonsJSON = require('./demonstJSON.js');
+var demonsJSON = require('./demonsJSON.js');
 
 
 var Interpreter = (function() {
