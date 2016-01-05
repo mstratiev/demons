@@ -1,4 +1,19 @@
 var data = (function() {
+    var COOKIE_NAME = 'daemon';
+
+    function setDeamon(sessionKey) {
+        cookie.set(COOKIE_NAME, sessionKey, 1);
+    }
+
+    function getDeamon() {
+        return cookie.get(COOKIE_NAME);
+    }
+
+    function removeDeamon() {
+        cookie.remove(COOKIE_NAME);
+    }
+
+
 
     var getNews = function() {
         var promise = new Promise(function(resolve, reject) {
