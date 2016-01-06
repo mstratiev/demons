@@ -5,6 +5,7 @@ var demonsJSON = require('./demonsJSON.js');
 
 
 var Interpreter = (function() {
+
     var Interpreter = function() {
         this.daemons = demonsJSON;
         return this;
@@ -39,10 +40,6 @@ var Interpreter = (function() {
             })
         })
         return news;
-    };
-    Interpreter.prototype.currentDemon = function(demon) {
-        var self = this;
-        
     };
 
     return Interpreter;

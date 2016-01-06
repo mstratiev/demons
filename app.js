@@ -18,10 +18,11 @@ app.get('/posts', function (req, res){
 			res.send(err)
 		})
 });
-
+/*
 app.get('/posts/:demon', function (req, res){
 	res.send('Requesting daily posts by '+ req.params.demon);
 })
+*/
 
 var server = app.listen(process.env.PORT || 5000, function () {
   var host = server.address().address;

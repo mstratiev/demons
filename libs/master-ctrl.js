@@ -12,15 +12,17 @@ var MasterControl = (function() {
         return this;
     };
 
-
-
     MasterControl.prototype.init = function() {
         //read DB json file
         var self = this;
         var p = new Promise(function(resolve, reject) {
-            self.writer.readJSON().then(function(json) {
-                self.posts = json;
-                resolve(true);
+            self.writer.readJSON('news.json', function(err, json) {
+                if (err) {
+                    console.log(err)
+                } else {
+                    self.posts = json;
+                    resolve(true);
+                }
             })
         })
         return p;
@@ -76,42 +78,6 @@ var MasterControl = (function() {
         return p;
     };
 
-
-    /*
-        MasterControl.prototype.interprete = function() {
-            var self = this;
-            console.log('MC intereprete')
-            var p = new Promise(function(resolve, reject) {
-                self.returnCurrentPosts().then(function(res) {
-                    var result = self.interpreter.sorta(res);
-                    resolve(result);
-                }, function(err) {
-                    console.log("error in MasterControl, interprete" + err)
-                    reject(err);
-                })
-            })
-            return p;
-        };
-    */
-    /*
-    MasterControl.prototype.collect = function() {
-        var self = this;
-        var date = new Date();
-        //in ms
-        var p = new Pormise(function(resolve, reject) {
-            if (date - self.date > 600000) {
-                self.date = date;
-                //get more posts
-
-                resolve(self.posts);
-            } else {
-                //return current posts
-                resolve(self.posts);
-            }
-        })
-        return p
-    };
-*/
     MasterControl.prototype.renewNewsJSON = function() {
         var self = this;
         self.writer.readJSON('news.json', function(err, json) {
@@ -142,12 +108,3 @@ var MasterControl = (function() {
 })();
 
 module.exports = new MasterControl();
-
-
-/*
-var m = new MasterControl();
-m.returnCurrentPosts().then(function(re) {
-    console.log(re[0])
-})
-
-*/

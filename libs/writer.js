@@ -9,7 +9,7 @@ var Writer = (function() {
         this.__dir = './db/';
         return this;
     };
-
+/*
     Writer.prototype.append = function(file, content) {
         var self = this;
         var promise = new Promise(function(resolve, reject) {
@@ -71,7 +71,7 @@ var Writer = (function() {
         })
         return promise;
     };
-
+*/
     Writer.prototype.readJSON = function(file, callback) {
         var self = this;
 
