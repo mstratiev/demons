@@ -1,4 +1,4 @@
-var demons = {
+/*var demons = {
     'Asmodeus': 'lust',
     'Lucifer': 'pride',
     'Mammon': 'greed',
@@ -16,14 +16,14 @@ var keywords = {
     "envy": ["celebrity", "celebrities", "migrants", "sanction"],
     "wrath": ["bomb", "attack", "kill", "alert", "war ", "nazi", "missle", "fight", "impact", "armed"],
     "sloth": []
-};
+};*/
 var daemons = {
-    "Asmodeus": ["lust", "sex", "affair"],
+    "Asmodeus": ["lust", "sex", "affair", "rape", "sexual assault"],
     "Lucifer": ["pride", "president", "minister", "prize", "sanction"],
     "Mammon": ["greed", "corruption", "bribe", "money", "award", "cash", "valuable", "rare", "sanction", "gold", "revenue", "rob", "addiction"],
    // "Beelzebub": ["gluttony", "government", "addiction"],
     "Leviathan": ["envy", "celebrity", "celebrities", "migrants", "border","suicide"],
-    "Satan": ["wrath", "threat", "soldier", "battle", "terror", "terrified", "bomb", "attack", "kill", "alert", "war ", "nazi", "missle", "fight", "impact", "armed"]
+    "Satan": ["wrath", "threat", "soldier", "battle", "terror", "terrified", "bomb", "attack","assault", "kill", "alert", "war ", "nazi", "missle", "fight", "impact", "armed"]
     //,
     //"Belphegor": ["sloth"]
 };

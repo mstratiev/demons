@@ -41,6 +41,7 @@ var data = (function() {
         })
         return promise
     };
+    /*
     var getByDemon = function(demon) {
         var promise = new Promise(function(resolve, reject) {
             $.ajax({
@@ -58,8 +59,8 @@ var data = (function() {
         })
         return promise
     };
-
-
+*/
+/*
     var getDaily = function() {
         var promise = new Promise(function(resolve, reject) {
             $.ajax({
@@ -77,7 +78,7 @@ var data = (function() {
         })
         return promise
     };
-
+*/
 
 
     var checkDeamon = function() {
@@ -96,9 +97,9 @@ var data = (function() {
 
     return {
         news: {
-            get: getNews,
+            get: getNews/*,
             getByDemon: getByDemon,
-            getDaily: getDaily
+            getDaily: getDaily*/
         },
         demon: {
             check: checkDeamon

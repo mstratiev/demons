@@ -56,19 +56,19 @@ var postController = (function() {
         var daemons = {
             demons: [{
                 name: "Asmodeus",
-                things: ["lust", "sex", "affair"]
+                things: ["lust", "sex", "affair", "rape", "sexual assault"]
             }, {
                 name: "Lucifer",
                 things: ["pride", "president", "minister", "prize", "sanction"]
             }, {
                 name: "Mammon",
-                things: ["greed", "corruption", "bribe", "money", "award", "cash", "valuable", "rare", "sanction", "gold", "revenue", "rob"]
+                things: ["greed", "corruption", "bribe", "money", "award", "cash", "valuable", "rare", "sanction", "gold", "revenue", "rob", "addiction"]
             }, {
                 name: "Leviathan",
-                things: ["envy", "celebrity", "celebrities", "migrants", "border"]
+                things: ["envy", "celebrity", "celebrities", "migrants", "border","suicide"]
             }, {
                 name: "Satan",
-                things: ["wrath", "threat", "soldier", "battle", "terror", "terrified", "bomb", "attack", "kill", "alert", "war ", "nazi", "missle", "fight", "impact", "armed"]
+                things: ["wrath", "threat", "soldier", "battle", "terror", "terrified", "bomb", "attack","assault", "kill", "alert", "war ", "nazi", "missle", "fight", "impact", "armed"]
             }]
         };
 
