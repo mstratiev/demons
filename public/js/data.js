@@ -1,8 +1,8 @@
 var data = (function() {
     var COOKIE_NAME = 'daemon';
 
-    function setDeamon(sessionKey) {
-        cookie.set(COOKIE_NAME, sessionKey, 0);
+    function setDeamon(dem) {
+        cookie.set(COOKIE_NAME, dem, 1);
     }
 
     function getDeamon() {
@@ -19,7 +19,7 @@ var data = (function() {
     }
 
     function newDeamon() {
-        var demons = ['Asmodeus', 'Lucifer', 'Mammon', 'Leviathan', 'Beelzebub', 'Satan', 'Belphegor'];
+        var demons = ['Asmodeus', 'Lucifer', 'Mammon', 'Leviathan', /*'Beelzebub',*/ 'Satan'/*, 'Belphegor'*/];
         return demons[rnd(0,6)];
     }
 
@@ -87,7 +87,7 @@ var data = (function() {
                 dem = newDeamon();
                 setDeamon(dem);
             }
-            resolve(dem)
+            resolve(dem);
         })
 
         return promise

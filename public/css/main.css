@@ -33,9 +33,6 @@ header nav ul li a {
   color: #000;
   text-decoration: none;
 }
-header {
-  display: none;
-}
 main {
   margin-top: 3rem;
 }
@@ -77,4 +74,31 @@ main {
   display: inline-block;
   text-align: left;
   width: 30rem;
+}
+#content .article a {
+  text-decoration: none;
+  color: #808080;
+}
+#content .abstract {
+  width: 100%;
+  text-align: center;
+}
+#content .abstract .text {
+  margin-top: 5rem;
+  display: inline-block;
+  width: 30rem;
+  font-size: 1.5rem;
+}
+#content .demons {
+  width: 100%;
+  text-align: center;
+}
+#content .demons .dem .name {
+  font-size: 1.8rem;
+}
+#content .demons .dem .things {
+  display: inline-block;
+  width: 20rem;
+  font-style: italic;
+  margin-bottom: 2rem;
 }
