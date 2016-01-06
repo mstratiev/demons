@@ -6,7 +6,7 @@ var MasterControl = (function() {
         this.reader = require('./reader');
         this.writer = require('./writer');
         this.interpreter = require('./interpreter');
-        this.storer = require('./storer');
+        this.cleaner = require('./post-cleaner');
         this.posts = [];
         this.date = new Date("01.05.2016");
         return this;
@@ -138,15 +138,11 @@ var MasterControl = (function() {
 
 module.exports = new MasterControl();
 
-/*
 
+/*
 var m = new MasterControl();
 m.returnCurrentPosts().then(function(re) {
-    //console.log(re)
+    console.log(re[0])
 })
-m.interprete().then(function(res) {
-    //console.log(res)
-}, function(err) {
-    console.log("error in MasterControl, returnCurrentPosts" + err)
-});
+
 */
