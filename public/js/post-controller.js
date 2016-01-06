@@ -5,12 +5,10 @@ var postController = (function() {
                 var os = {
                     posts: []
                 };
-                _(res).each(function(item) {
-                        _(item).each(function(o) {
-                            o.description = o.description.replace(/(<[\s\S]+>)/g, '');
-                            o.datee = moment(o.date).format("Do MMM YYYY");
-                            os.posts.push(o);
-                        })
+                res.forEach(function(o) {
+                        o.description = o.description.replace(/(<[\s\S]+>)/g, '');
+                        o.dateFormated = moment(o.date).format("Do MMM YYYY");
+                        os.posts.push(o);
                     })
                     //------------------------------------
                     //console.log(os)
@@ -20,7 +18,7 @@ var postController = (function() {
                         demon: demon,
                         posts: []
                     };
-                    _(os.posts).each(function(item) {
+                    os.posts.forEach(function(item) {
                             if (item[demon]) {
                                 os2.posts.push(item)
                             }
@@ -57,22 +55,24 @@ var postController = (function() {
     };
 
     var getDemons = function(context) {
-        var daemons = {demons:[{
-            name: "Asmodeus",
-            things: ["lust", "sex", "affair"]
-        }, {
-            name: "Lucifer",
-            things: ["pride", "president", "minister", "prize", "sanction"]
-        }, {
-            name: "Mammon",
-            things: ["greed", "corruption", "bribe", "money", "award", "cash", "valuable", "rare", "sanction", "gold", "revenue", "rob"]
-        }, {
-            name: "Leviathan",
-            things: ["envy", "celebrity", "celebrities", "migrants", "border"]
-        }, {
-            name: "Satan",
-            things: ["wrath", "threat", "soldier", "battle", "terror", "terrified", "bomb", "attack", "kill", "alert", "war ", "nazi", "missle", "fight", "impact", "armed"]
-        }]};
+        var daemons = {
+            demons: [{
+                name: "Asmodeus",
+                things: ["lust", "sex", "affair"]
+            }, {
+                name: "Lucifer",
+                things: ["pride", "president", "minister", "prize", "sanction"]
+            }, {
+                name: "Mammon",
+                things: ["greed", "corruption", "bribe", "money", "award", "cash", "valuable", "rare", "sanction", "gold", "revenue", "rob"]
+            }, {
+                name: "Leviathan",
+                things: ["envy", "celebrity", "celebrities", "migrants", "border"]
+            }, {
+                name: "Satan",
+                things: ["wrath", "threat", "soldier", "battle", "terror", "terrified", "bomb", "attack", "kill", "alert", "war ", "nazi", "missle", "fight", "impact", "armed"]
+            }]
+        };
 
         templates.get('descriptions').then(function(template) {
             context.$element().html(template(daemons))
