@@ -77,7 +77,6 @@ var Writer = (function() {
 
         try {
             fs.readFile(self.__dir + file, function(err, data) {
-                console.log(self.__dir)
                 if (err) {
                     console.log(err);
                     //callback(err, null)

@@ -3,17 +3,15 @@ var postController = (function() {
         data.news.get().then(function(res) {
             templates.get('deamons').then(function(template) {
                 var os = {
-                    posts: []
+                    posts: res
                 };
-                res.forEach(function(o) {
-                        o.description = o.description.replace(/(<[\s\S]+>)/g, '');
+                data.demon.check().then(function(demon) {
+                    os.demon = demon;
+                    os.posts.forEach(function(o) {
+                        //o.description = o.description.replace(/(<[\s\S]+>)/g, '');
                         o.dateFormated = moment(o.date).format("Do MMM YYYY");
                         os.posts.push(o);
                     })
-                    //------------------------------------
-                    //console.log(os)
-                data.demon.check().then(function(demon) {
-                    os.demon = demon;
                     var os2 = {
                         demon: demon,
                         posts: []

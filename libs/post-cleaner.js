@@ -8,26 +8,27 @@ var Cleaner = (function() {
             title: item.title,
             description: item.description.replace(/(<[\s\S]+>)/g, ''),
             date: item.date,
-            copyright: item.meta.copyright/*,
+            copyright: item.meta.copyright,
             Asmodeus: item.Asmodeus,
             Lucifer: item.Lucifer,
             Mammon: item.Mammon,
             Leviathan: item.Leviathan,
-            Satan: item.Satan*/
+            Satan: item.Satan
         }
     };
 
 
     Cleaner.prototype.cleanAll = function(news) {
         var self = this;
+        var temp = [];
         if (!Array.isArray(news)) {
             console.log("Cleaner needs an array of news!!")
         }
         news.forEach(function(it, i) {
-            news[i] = self.clean(it);
+            temp[i] = self.clean(it);
         })
 
-        return news;
+        return temp;
     };
     return Cleaner;
 })();

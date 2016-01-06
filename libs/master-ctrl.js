@@ -34,14 +34,19 @@ var MasterControl = (function() {
             self.reader.readAll().then(function(resa) {
                 console.log('Reader is reading new posts');
                 var res = self.interpreter.sorta(resa);
+                var pp;
                 res.forEach(function(post) {
-                    if (Array.isArray(post)) {
-                        post.forEach(function(p) {
-                            self.posts.push(p)
-                        })
-                    }
-                })
-                //self.renewNewsJSON()
+                        if (Array.isArray(post)) {
+                            post.forEach(function(p) {
+                                pp = self.cleaner.clean(p);
+                                if (self.posts.indexOf(pp) < 0) {
+                                    self.posts.push(pp);
+                                }
+                            })
+                        }
+                    })
+                    //-----------updating the JSON DB
+                    //self.renewNewsJSON()
                 resolve(self.posts);
             });
         });
