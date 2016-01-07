@@ -64,15 +64,7 @@ var postController = (function() {
         })
 
     };
-    /*
-    var getByDemon = function(context, demon) {
-        data.news.getByDemon(demon).then(function(res) {
-            templates.get('demons').then(function(template) {
-                context.$element().html(template(res))
-            })
-        })
-    };
-*/
+    
     var getDaily = function(context) {
         data.news.getDaily().then(function(res) {
             templates.get('demons').then(function(template) {
