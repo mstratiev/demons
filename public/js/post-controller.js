@@ -1,5 +1,12 @@
 var postController = (function() {
-    var getAll = function(context) {
+    var demonsArr = ["Asmodeus",
+        "Lucifer",
+        "Mammon",
+        "Leviathan",
+        "Satan"
+    ];
+
+    var getDemon = function(context) {
         data.news.get().then(function(res) {
             templates.get('deamons').then(function(template) {
                 var os = {
@@ -30,6 +37,33 @@ var postController = (function() {
         })
     };
 
+    var getAllNegativePosts = function(context) {
+
+        var os = {posts:[]};
+        var demLen = demonsArr.length;
+        var i;
+
+        templates.get('deamons-with-count').then(function(template) {
+            data.news.get().then(function(news) {
+                news.forEach(function(n) {
+
+                    for(i = 0; i<demLen; i+=1){
+                        dem = demonsArr[i];
+                        if(n[dem]){
+                            os.posts.push(n);
+                            break;
+                        }
+                    }
+                })
+                context.$element().html(template(os))
+            })
+
+            
+
+        })
+
+    };
+    /*
     var getByDemon = function(context, demon) {
         data.news.getByDemon(demon).then(function(res) {
             templates.get('demons').then(function(template) {
@@ -37,7 +71,7 @@ var postController = (function() {
             })
         })
     };
-
+*/
     var getDaily = function(context) {
         data.news.getDaily().then(function(res) {
             templates.get('demons').then(function(template) {
@@ -65,10 +99,10 @@ var postController = (function() {
                 things: ["greed", "corruption", "bribe", "money", "award", "cash", "valuable", "rare", "sanction", "gold", "revenue", "rob", "addiction"]
             }, {
                 name: "Leviathan",
-                things: ["envy", "celebrity", "celebrities", "migrants", "border","suicide"]
+                things: ["envy", "celebrity", "celebrities", "migrants", "border", "suicide"]
             }, {
                 name: "Satan",
-                things: ["wrath", "threat", "soldier", "battle", "terror", "terrified", "bomb", "attack","assault", "kill", "alert", "war ", "nazi", "missle", "fight", "impact", "armed"]
+                things: ["wrath", "threat", "soldier", "battle", "terror", "terrified", "bomb", "attack", "assault", "kill", "alert", "war ", "nazi", "missle", "fight", "impact", "armed"]
             }]
         };
 
@@ -80,8 +114,9 @@ var postController = (function() {
 
 
     return {
-        all: getAll,
+        getDemon: getDemon,
         abstract: getAbstract,
-        demons: getDemons
+        demons: getDemons,
+        all: getAllNegativePosts
     }
 })();

@@ -1,0 +1,35 @@
+<div class="demon">
+	All the demons
+</div>
+{{#each posts}}
+<div class = "article">
+<h3>{{this.title}}</h3>
+<div class = "date">
+	{{this.dateFormated}}
+</div>
+<div class = "description">
+	{{this.description}}
+</div>
+<div class="current-demons">
+	{{#if this.Asmodeus}}
+	<span>Asmodeus: {{this.Asmodeus}}</span>
+	{{/if}}
+	{{#if this.Lucifer}}
+	<span>Lucifer: {{this.Lucifer}}</span>
+	{{/if}}
+	{{#if this.Mammon}}
+	<span>Mammon: {{this.Mammon}}</span>
+	{{/if}}
+	{{#if this.Leviathan}}
+	<span>Leviathan: {{this.Leviathan}}</span>
+	{{/if}}
+	{{#if this.Satan}}
+	<span>Satan: {{this.Satan}}</span>
+	{{/if}}
+
+	</div>
+<div>
+	<a href="{{this.link}}">link</a>
+</div>
+</div>
+{{/each}}

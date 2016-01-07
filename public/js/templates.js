@@ -10,7 +10,7 @@ var templates = (function() {
                     resolve(template);
                 },
                 error: function(err) {
-                    toastr.error(err);
+                    console.log(err);
                     reject(err);
                 }
             })
