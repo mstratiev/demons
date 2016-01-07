@@ -50,6 +50,7 @@ var postController = (function() {
                     for(i = 0; i<demLen; i+=1){
                         dem = demonsArr[i];
                         if(n[dem]){
+                            n.dateFormated = moment(n.date).format("Do MMM YYYY");
                             os.posts.push(n);
                             break;
                         }
