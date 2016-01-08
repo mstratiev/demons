@@ -15,12 +15,16 @@ p {
 }
 header {
   height: 3rem;
+  line-height: 3rem;
   position: fixed;
   top: 0;
+  width: 100%;
   display: block;
+  text-align: center;
+  background-color: #fff;
 }
 header nav {
-  display: block;
+  display: inline-block;
 }
 header nav ul {
   list-style-type: none;
@@ -28,24 +32,22 @@ header nav ul {
 header nav ul li {
   color: #000;
   display: inline-block;
+  padding-right: 1rem;
 }
 header nav ul li a {
+  font-size: 1.5rem;
   color: #000;
   text-decoration: none;
+}
+header nav ul li:last-child {
+  padding-left: 0;
 }
 main {
   margin-top: 3rem;
 }
-.title {
-  padding-top: 2rem;
-  padding-bottom: 1.5rem;
-  text-align: center;
-}
-.title h1 {
-  text-transform: uppercase;
-}
 #content {
   display: block;
+  text-align: center;
 }
 #content .loading {
   text-align: center;
@@ -65,6 +67,7 @@ main {
 #content .article {
   text-align: center;
 }
+#content .article .title,
 #content .article h3 {
   font-size: 1.5rem;
   padding-top: 2rem;
@@ -74,10 +77,21 @@ main {
   display: inline-block;
   text-align: left;
   width: 30rem;
+  margin-bottom: 1rem;
+}
+#content .article .date {
+  margin-bottom: 1rem;
 }
 #content .article a {
   text-decoration: none;
   color: #808080;
+}
+#content .article .current-demons {
+  margin-bottom: 0.5rem;
+}
+#content .article .current-demons span {
+  display: inline-block;
+  margin-right: 1rem;
 }
 #content .abstract {
   width: 100%;

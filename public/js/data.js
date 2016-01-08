@@ -19,8 +19,9 @@ var data = (function() {
     }
 
     function newDeamon() {
-        var demons = ['Asmodeus', 'Lucifer', 'Mammon', 'Leviathan', /*'Beelzebub',*/ 'Satan'/*, 'Belphegor'*/];
-        return demons[rnd(0,6)];
+        var demons = ['Asmodeus', 'Lucifer', 'Mammon', 'Leviathan', 'Satan'/*, 'Belphegor','Beelzebub'*/];
+        var len = demons.length -1;
+        return demons[rnd(0,len)];
     }
 
 

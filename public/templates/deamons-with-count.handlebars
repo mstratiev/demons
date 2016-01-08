@@ -3,7 +3,7 @@
 </div>
 {{#each posts}}
 <div class = "article">
-<h3>{{this.title}}</h3>
+	<h3>{{this.title}}</h3>
 <div class = "date">
 	{{this.dateFormated}}
 </div>
@@ -26,10 +26,9 @@
 	{{#if this.Satan}}
 	<span>Satan: {{this.Satan}}</span>
 	{{/if}}
-
 	</div>
-<div>
-	<a href="{{this.link}}">link</a>
+	<div>
+	<a href="{{this.link}}">full article</a>
 </div>
 </div>
 {{/each}}

@@ -23,7 +23,7 @@ var daemons = {
     "Mammon": ["greed", "corruption", "bribe", "money", "award", "cash", "valuable", "rare", "sanction", "gold", "revenue", "rob", "addiction"],
    // "Beelzebub": ["gluttony", "government", "addiction"],
     "Leviathan": ["envy", "celebrity", "celebrities", "migrants", "border", "suicide"],
-    "Satan": ["wrath", "threat", "soldier", "battle", "terror", "terrified", "bomb", "attack","assault", "kill", "alert", "war ", "nazi", "missle", "fight", "impact", "armed"]
+    "Satan": ["wrath", "massacre", "threat", "soldier", "battle", "terror", "terrified", "bomb", "attack","assault", "kill", "alert", "war ", "nazi", "missle", "fight", "impact", "armed"]
     //,
     //"Belphegor": ["sloth"]
 };
