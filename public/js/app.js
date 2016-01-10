@@ -8,7 +8,6 @@
         this.get('#/demon/:demon', function(context) {
            var dem = this.params['demon'];
            //.replace(/:/g,'');
-
             postController.getDemon(context, _,dem)
         });
         this.get('#/all', postController.all);

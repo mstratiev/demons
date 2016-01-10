@@ -14,7 +14,9 @@ var postController = (function() {
                 };
                 data.demon.check().then(function(demon) {
                     os.demon = demon;
+                    os.daily = true;
                     if(dem){
+                        os.daily = false;
                         demon = dem;
                         os.demon = dem;
                     }
@@ -24,6 +26,7 @@ var postController = (function() {
                         os.posts.push(o);
                     })
                     var os2 = {
+                        daily: os.daily,
                         demon: demon,
                         posts: []
                     };
@@ -84,24 +87,7 @@ var postController = (function() {
     };
 
     var getDemons = function(context) {
-        var daemons = {
-            demons: [{
-                name: "Asmodeus",
-                things: ["lust", "sex", "affair", "rape", "sexual assault"]
-            }, {
-                name: "Lucifer",
-                things: ["pride", "president", "minister", "prize", "sanction"]
-            }, {
-                name: "Mammon",
-                things: ["greed", "corruption", "bribe", "money", "award", "cash", "valuable", "rare", "sanction", "gold", "revenue", "rob", "addiction"]
-            }, {
-                name: "Leviathan",
-                things: ["envy", "celebrity", "celebrities", "migrants", "border", "suicide"]
-            }, {
-                name: "Satan",
-                things: ["wrath", "threat", "soldier", "battle", "terror", "terrified", "bomb", "attack", "assault", "kill", "alert", "war ", "nazi", "missle", "fight", "impact", "armed"]
-            }]
-        };
+        var daemons = demonsCompleteFront;
 
         templates.get('descriptions').then(function(template) {
             context.$element().html(template(daemons))

@@ -10,6 +10,8 @@ var Cleaner = (function() {
             date: item.date,
             copyright: item.meta.copyright,
             Asmodeus: item.Asmodeus,
+            Beelzebub: item.Beelzebub,
+            Belphegor: item.Belphegor,
             Lucifer: item.Lucifer,
             Mammon: item.Mammon,
             Leviathan: item.Leviathan,
