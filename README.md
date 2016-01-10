@@ -3,8 +3,7 @@
 	based on the classification of demons by Binsfeld
 
 	for more information and functioning web application:
-
-	http://deamons.herokuapp.com/
+http://deamons.herokuapp.com/
 ###implementation
 	reading RSS feeds from major news sites and cross-referencing
 	them by word content and sorting them under categories
