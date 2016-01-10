@@ -47,7 +47,7 @@ var demonsComplete = {
         'harass',
         'harem',
         'incest',
-        'lust',
+        ' lust',
         'masochi',
         'masturbat',
         'nudi',
@@ -56,7 +56,7 @@ var demonsComplete = {
         'orgasm',
         'porn',
         'rape',
-        'sex',
+        ' sex',
         'sexual assault ',
         'unfaithful',
         'voyeur'
