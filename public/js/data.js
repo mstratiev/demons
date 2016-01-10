@@ -2,7 +2,7 @@ var data = (function() {
     var COOKIE_NAME = 'daemon';
 
     function setDeamon(dem) {
-        cookie.set(COOKIE_NAME, dem, 1);
+        cookie.set(COOKIE_NAME, dem, 0.01);
     }
 
     function getDeamon() {
