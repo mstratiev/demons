@@ -6,7 +6,7 @@ var postController = (function() {
         "Satan"
     ];
 
-    var getDemon = function(context) {
+    var getDemon = function(context, _, dem) {
         data.news.get().then(function(res) {
             templates.get('deamons').then(function(template) {
                 var os = {
@@ -14,6 +14,10 @@ var postController = (function() {
                 };
                 data.demon.check().then(function(demon) {
                     os.demon = demon;
+                    if(dem){
+                        demon = dem;
+                        os.demon = dem;
+                    }
                     os.posts.forEach(function(o) {
                         //o.description = o.description.replace(/(<[\s\S]+>)/g, '');
                         o.dateFormated = moment(o.date).format("Do MMM YYYY");
